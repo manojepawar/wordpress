@@ -1,3 +1,5 @@
+<?php
+
 // Add a custom product setting tab to edit product pages options FOR SIMPLE PRODUCTS only
 add_filter( 'woocommerce_product_data_tabs', 'discount_new_product_data_tab', 50, 1 );
 function discount_new_product_data_tab( $tabs ) {
@@ -43,3 +45,4 @@ function save_custom_fields_product_options_discount( $post_id ) {
         update_post_meta( $post_id, '_discount_info', esc_attr( $number_field ) );
     }
 }
+?>
